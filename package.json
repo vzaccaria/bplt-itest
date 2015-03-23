@@ -1,6 +1,6 @@
 {
   "name": "bplt-itest",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Test your npm module into a docker container",
   "main": "index.js",
   "bin": {
