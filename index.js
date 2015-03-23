@@ -49,8 +49,6 @@ var main = function () {
 
   if (!help) {
     deploy(directory);
-  } else {
-    printHelp();
   }
 };
 

@@ -40,7 +40,7 @@ var _module = () => {
     log(`**Changing directory**: ${directory}`)
     process.chdir(directory)
     exc(`docker build -t ${name} .`)
-      .then(() => {
+      .finally(() => {
         exc(`docker rmi ${name}`)
       })
   }
