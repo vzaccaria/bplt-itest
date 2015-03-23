@@ -43,8 +43,6 @@ var main = () => {
   } = (getOptions(doc))
   if (!help) {
     deploy(directory)
-  } else {
-    printHelp()
   }
 }
 
