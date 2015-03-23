@@ -1,0 +1,32 @@
+{
+  "name": "bplt-itest",
+  "version": "0.0.1",
+  "description": "No name given yet",
+  "main": "index.js",
+  "bin": {
+      "bplt-itest": "./index.js"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vzaccaria/bplt-itest.git"
+  },
+  "author": "Vittorio Zaccaria",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/vzaccaria/bplt-itest/issues"
+  },
+  "homepage": "https://github.com/vzaccaria/bplt-itest",
+  "dependencies": {
+    "bluebird": "^2.9.14",
+    "debug": "^2.1.3",
+    "docopt": "^0.6.0"
+  },
+  "devDependencies": {
+    "diy-build": "^1.0.8",
+    "babel": "^4.7.16",
+    "xyz": "*",
+    "verb": "*",
+    "verb-cli": "*"
+  }
+}
