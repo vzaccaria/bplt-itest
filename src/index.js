@@ -1,12 +1,15 @@
-var shelljs = require('shelljs')
+require('shelljs')
 var {
   docopt
 } = require('docopt')
-var promise = require('bluebird')
 var _ = require('lodash')
 var fs = require('fs')
+var {
+  deploy
+} = require('./lib/bplt');
 
 var getOption = (a, b, def, o) => {
+  "use strict"
   if (_.isString(o[a])) {
     return o[a]
   } else {
@@ -20,17 +23,25 @@ var getOption = (a, b, def, o) => {
 
 
 var getOptions = doc => {
+  "use strict"
   var o = docopt(doc)
   var help = getOption('-h', '--help', false, o)
+  var directory = o.SRC
   return {
-    help
+    help, directory
   }
 }
 
 var doc = fs.readFileSync(__dirname + "/docs/usage.md", 'utf8')
 
 var main = () => {
-  var { help } = (getOptions(doc))
+  "use strict"
+  var {
+    help, directory
+  } = (getOptions(doc))
+  if (!help) {
+    deploy(directory)
+  }
 }
 
 main()

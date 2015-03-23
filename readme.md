@@ -11,7 +11,7 @@ npm i -g bplt-itest
 
 ```
 Usage:
-    bplt-itest ( -h | --help )
+    bplt-itest SRC ( -h | --help )
 
 Options:
     -h, --help              help for bplt-itest
@@ -19,12 +19,16 @@ Options:
 Commands:
 
 Arguments:
+    SRC                     directory containing the module to be tested
 
 ```
 
-## What is it
+What is it
+----------
 
-TBD
+This command creates a temporary docker container to test your npm
+modules. You can use it to test your modules on different node versions
+and to check whether dependencies are fully satisfied.
 
 
 ## Author

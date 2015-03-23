@@ -9,13 +9,13 @@ generateProject(_ => {
   _.babel = (dir, ...deps) => {
     var command = (_) => `./node_modules/.bin/babel ${_.source} -o ${_.product}`
     var product = (_) => `./lib/${path.basename(_.source)}`
-    _.compileFiles(...([ command, product, dir ].concat(deps)))
+    _.compileFiles(...([command, product, dir].concat(deps)))
   }
 
   _.verb = (verbfile, deps) => {
     var command = (_) => `./node_modules/.bin/verb`
     var product = (_) => `./readme.md`
-    _.compileFiles(...([ command, product, verbfile ].concat(deps)))
+    _.compileFiles(...([command, product, verbfile].concat(deps)))
   }
 
   _.collectSeq("all", _ => {
@@ -27,7 +27,7 @@ generateProject(_ => {
     _.cmd("chmod +x ./index.js")
   })
 
-  _.collect("up", _ => {
+  _.collect("update", _ => {
     _.cmd("make clean && ./node_modules/.bin/babel configure.js | node")
   });
 

@@ -1,5 +1,5 @@
 Usage:
-    bplt-itest ( -h | --help )
+    bplt-itest SRC ( -h | --help )
 
 Options:
     -h, --help              help for bplt-itest
@@ -7,3 +7,4 @@ Options:
 Commands:
 
 Arguments:
+    SRC                     directory containing the module to be tested
