@@ -1,4 +1,4 @@
-# bplt-itest [![NPM version](https://badge.fury.io/js/bplt-itest.svg)](http://badge.fury.io/js/bplt-itest)
+# bplt-itest 
 
 
 ## Install globally with [npm](npmjs.org):
@@ -11,7 +11,7 @@ npm i -g bplt-itest
 
 ```
 Usage:
-    bplt-itest SRC ( -h | --help )
+    bplt-itest SRC [ -h | --help ]
 
 Options:
     -h, --help              help for bplt-itest
@@ -29,6 +29,15 @@ What is it
 This command creates a temporary docker container to test your npm
 modules. You can use it to test your modules on different node versions
 and to check whether dependencies are fully satisfied.
+
+Prerequisites
+-------------
+
+On OSX, remember to run
+
+    > $(boot2docker shellinit)
+
+in the same shell where you run the command.
 
 
 ## Author

@@ -1,5 +1,5 @@
 Usage:
-    bplt-itest SRC ( -h | --help )
+    bplt-itest SRC [ -h | --help ]
 
 Options:
     -h, --help              help for bplt-itest

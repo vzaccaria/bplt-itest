@@ -22,6 +22,8 @@ var getOption = (a, b, def, o) => {
 }
 
 
+
+
 var getOptions = doc => {
   "use strict"
   var o = docopt(doc)
@@ -41,6 +43,8 @@ var main = () => {
   } = (getOptions(doc))
   if (!help) {
     deploy(directory)
+  } else {
+    printHelp()
   }
 }
 

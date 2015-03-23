@@ -1,4 +1,4 @@
-# {%= name %} {%= badge("fury") %}
+# {%= name %} 
 
 
 {%= include("install-global") %}
