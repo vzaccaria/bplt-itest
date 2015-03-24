@@ -11,10 +11,11 @@ npm i -g bplt-itest
 
 ```
 Usage:
-    bplt-itest SRC [ -h | --help ]
+    bplt-itest SRC [ -i | --inspect ][ -h | --help ]
 
 Options:
     -h, --help              help for bplt-itest
+    -i, --inspect           launch dockerized instance but dont remove it
 
 Commands:
 

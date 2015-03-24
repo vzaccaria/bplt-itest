@@ -45,8 +45,26 @@ var _module = () => {
       })
   }
 
+  var inspect = (dir) => {
+    var id = uid(4)
+    var name = `tmpimage-${id}`
+    var directory = path.resolve(dir)
+    log("Deploy for inspection")
+    log(`**Copying docker file in**: ${directory} `)
+    cp('-f', `${__dirname}/../files/Dockerfile`, directory)
+    log(`**Changing directory**: ${directory}`)
+    process.chdir(directory)
+    exc(`docker build -t ${name} .`)
+      .finally(() => {
+        log("**Setup done. To connect:**")
+        log(`docker run -i -t ${name} /bin/bash`)
+        log("**When finished:**")
+        log(`docker rmi ${name}`)
+      })
+  }
+
   return {
-    deploy
+    deploy, inspect
   }
 
 }
